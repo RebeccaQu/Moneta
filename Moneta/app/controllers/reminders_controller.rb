@@ -1,6 +1,5 @@
 class RemindersController < ApplicationController
   def index
-
     @reminders = Reminder.all
     @reminder = Reminder.new
     @reminder.start_time = Date.today

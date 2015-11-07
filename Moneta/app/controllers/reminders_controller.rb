@@ -2,7 +2,7 @@ class RemindersController < ApplicationController
   def index
     @reminders = Reminder.where(start_time: (Date.today))
     @reminder = Reminder.new
-    @reminder.start_time = Date.today
+    @reminder.start_time
     @reminder.date = Date.today
   end
 
@@ -12,7 +12,7 @@ class RemindersController < ApplicationController
 
   def new
     @reminder = Reminder.new
-    @reminder.start_time = Date.today
+    @reminder.start_time
     @reminder.date = Date.today
 
   end

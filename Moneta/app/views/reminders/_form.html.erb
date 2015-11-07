@@ -1,0 +1,30 @@
+<%= form_for @reminder do |f| %>
+
+  <div class="field">
+    <%= f.label :reminder_name %>
+    <%= f.text_field :reminder_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :start_time %>
+    <%= f.date_field :start_time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date %>
+    <%= f.date_field :date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :duration %>
+    <%= f.date_field :duration %>
+  </div>
+
+
+
+  <div class="field">
+    <%= f.button "Create Reminder" %>
+  </div>
+
+<% end %>
+

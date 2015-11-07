@@ -1,6 +1,6 @@
 class RemindersController < ApplicationController
   def index
-    @reminders = Reminder.all
+    @reminders = Reminder.where(start_time: (Date.today))
     @reminder = Reminder.new
     @reminder.start_time = Date.today
     @reminder.date = Date.today
@@ -21,7 +21,7 @@ class RemindersController < ApplicationController
     @reminder = Reminder.new(reminder_params)
 
     if @reminder.save
-      redirect_to user_reminders
+      redirect_to reminders_url
     else
       render :new
     end

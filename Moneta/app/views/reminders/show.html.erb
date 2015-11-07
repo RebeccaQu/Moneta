@@ -7,16 +7,15 @@
 
 
     <dt>Start Time</dt>
-    <dd><%= @reminder.start_time %></dd>
+    <dd><%= @reminder.start_time.strftime("%l:%M %p") %> </dd>
 
     <dt>Date</dt>
-    <dd><%= @reminder.date%></dd>
+    <dd><%= @reminder.date.strftime("%b %d, %Y") %></dd>
 
     <dt>Duration</dt>
     <dd><%= @reminder.duration %></dd>
 
    </dl>
-
 
 
 </section>

@@ -5,15 +5,15 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
-      session[:user_id] = user.user_id
-      redirect_to events_url
+      session[:user_id] = user_id
+      redirect_to reminders_url, notice: "Logged in"
     else
-      render :new
+      render "new"
     end
   end
 
   def destroy
     session[:user_id] = nil
-    redirect_to new_session
+    redirect_to root_url, notice: "logged out"
   end
 end

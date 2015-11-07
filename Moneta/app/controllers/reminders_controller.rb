@@ -1,11 +1,11 @@
 class RemindersController < ApplicationController
   def index
-    if current_user
-      @reminders = Reminder.where(start_time: (Date.today))
-      @reminder = Reminder.new
-      @reminder.start_time
-      @reminder.date = Date.today
-    end
+
+    @reminders = Reminder.all
+    @reminder = Reminder.new
+    @reminder.start_time = Date.today
+    @reminder.date = Date.today
+
   end
 
   def show

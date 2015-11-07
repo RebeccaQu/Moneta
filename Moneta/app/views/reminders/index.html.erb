@@ -2,8 +2,8 @@
 
 <% @reminders.each do |r| %>
  <h1> <%= r.reminder_name %> </h1>
- <h3> <%= r.start_time %> </h3>
- <h3> <%= r.date %></h3>
+ <h3> <%= r.start_time.strftime("%l:%M %p") %> </h3>
+ <h3> <%= r.date.strftime("%b %d, %Y")  %></h3>
 <% end %>
 
 <h2>Create a Reminder</h2>

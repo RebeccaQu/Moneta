@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reminder_name: MyString
+  date: 2015-11-07 11:33:07
+  start_time: 2015-11-07 11:33:07
+  duration: 
+  notification: false
+  completion: false
+
+two:
+  reminder_name: MyString
+  date: 2015-11-07 11:33:07
+  start_time: 2015-11-07 11:33:07
+  duration: 
+  notification: false
+  completion: false

@@ -3,17 +3,18 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(email: params[:email])
-    if user && user.authenticate(params[:password])
-      session[:user_id] = user_id
-      redirect_to reminders_url, notice: "Logged in"
+    @user = User.find_by(email: params[:email])
+
+    if @user && @user.authenticate(params[:password])
+      session[:user_id] = @user.id
+      redirect_to reminders_path, notice: "Logged In!"
     else
-      render "new"
+      render :new, notice: "Wrong email or password"
     end
   end
 
   def destroy
     session[:user_id] = nil
-    redirect_to root_url, notice: "logged out"
+    redirect_to root_url, notice: "Logged Out"
   end
 end

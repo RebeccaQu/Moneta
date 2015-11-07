@@ -1,9 +1,9 @@
 User.create!(
-  first_name: 'Hacker',
-  last_name: 'Nest',
-  email: 'hacker.nest@moneta.com',
+  first_name: 'Betty',
+  last_name: 'Maker',
+  email: 'betty@maker.com',
   dob: '01011960',
-  password: 'password'
+  password: 'password',
   password_confirmation: 'password'
   )
 
@@ -11,7 +11,7 @@ Caregiver.create!(
   first_name: 'Sam',
   last_name: 'Smith',
   email: 'sam.smith@moneta.com',
-  password: 'password'
+  password: 'password',
   password_confirmation: 'password'
 
   )

@@ -4,8 +4,6 @@ class RemindersController < ApplicationController
     @reminder = Reminder.new
     @reminder.start_time = Date.today
     @reminder.date = Date.today
-
-
   end
 
   def show
@@ -18,7 +16,6 @@ class RemindersController < ApplicationController
     @reminder.date = Date.today
 
   end
-
 
   def create
     @reminder = Reminder.new(reminder_params)
@@ -37,9 +34,9 @@ class RemindersController < ApplicationController
   end
 
   private
+
   def reminder_params
     params.require(:reminder).permit(:reminder_name, :date, :start_time, :duration, :repetition, :notification, :completion)
   end
-
 
 end

@@ -1,22 +1,8 @@
-<h2><%= @reminder.reminder_name %></h2>
+<h1>Today's reminders</h1>
 
-<section class="reminder">
-  <dl>
-   <dt>Start Time</dt>
-   <dd><%= @reminder.reminder_name %></dd>
-
-
-    <dt>Start Time</dt>
-    <dd><%= @reminder.start_time.strftime("%l:%M %p") %> </dd>
-
-    <dt>Date</dt>
-    <dd><%= @reminder.date.strftime("%b %d, %Y") %></dd>
-
-    <dt>Duration</dt>
-    <dd><%= @reminder.duration %></dd>
-
-   </dl>
+ <h1> <%= @reminder.reminder_name %> </h1>
+ <h3> <%= @reminder.start_time %> </h3>
+ <h3> <%= @reminder.date %></h3>
 
 
-</section>
 

@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
-      redirect_to reminders_path, notice: "Logged In!"
+      redirect_to user_reminder_path, notice: "Logged In!"
     else
       render :new, notice: "Wrong email or password"
     end

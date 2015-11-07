@@ -1,6 +1,8 @@
 class RemindersController < ApplicationController
   def index
-    @reminder = Reminder.all
+    @reminders = Reminder.all
+    @reminder = Reminder.new
+
   end
 
   def show
@@ -19,6 +21,7 @@ class RemindersController < ApplicationController
       redirect_to reminders_url
     else
       render :new
+    end
   end
 
   def destroy

@@ -19,4 +19,3 @@ class Caregiver < ActiveRecord::Base
 
 end
 
-end

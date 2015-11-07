@@ -2,7 +2,6 @@ class Caregiver < ActiveRecord::Base
   has_secure_password
 
   belongs_to :user
-
   has_many :reminders
 
   validates :password, length: { minimum: 3 }, on: :create

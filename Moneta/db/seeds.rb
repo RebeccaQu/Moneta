@@ -3,14 +3,17 @@ User.create!(
   last_name: 'Nest',
   email: 'hacker.nest@moneta.com',
   dob: '01011960',
-  password_digest: 'password'
+  password: 'password'
+  password_confirmation: 'password'
   )
 
 Caregiver.create!(
   first_name: 'Sam',
   last_name: 'Smith',
   email: 'sam.smith@moneta.com',
-  password_digest: 'password'
+  password: 'password'
+  password_confirmation: 'password'
+
   )
 
 r1 = Reminder.create!(

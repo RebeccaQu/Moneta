@@ -1,5 +1,6 @@
 class RemindersController < ApplicationController
   def index
+    @reminder = Reminder.all
   end
 
   def show
@@ -13,12 +14,17 @@ class RemindersController < ApplicationController
 
   def create
     @reminder = Reminder.new(reminder_params)
+
+    if @reminder.save
+      redirect_to reminders_url
+    else
+      render :new
   end
 
   def destroy
     @reminder = Reminder.find(params[:id])
     @reminder.destroy
-    redirect_to products_path
+    redirect_to reminders_url
   end
 
   private

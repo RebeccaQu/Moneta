@@ -1,4 +1,4 @@
-<h1>Hi Alice, this is what you have going on this month!</h1>
+<h1>Hi Betty, this is what you have going on this month!</h1>
 
 <% if false %>
 <% @reminders.each do |r| %>
@@ -29,6 +29,7 @@
 
 
 <h3>Create A New Reminder</h3>
-<div class="calendar">
-  <%= render 'form' %>
-</div>
+
+  <div class="new-reminder">
+    <%= render 'form' %>
+  </div>

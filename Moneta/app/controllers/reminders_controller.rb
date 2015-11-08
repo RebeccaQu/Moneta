@@ -28,7 +28,6 @@ class RemindersController < ApplicationController
     redirect_to reminders_url
   end
 
-
   private
 
   def reminder_params

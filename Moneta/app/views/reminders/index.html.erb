@@ -1,5 +1,9 @@
 <h1>Hi Betty, this is what you have going on this month!</h1>
 
+<%= link_to "Today's View", today_index_path %> |
+<%= link_to "My Family", families_path %> |
+<%= link_to "My Medication", medications_path %> 
+
 <% if false %>
 <% @reminders.each do |r| %>
  <h1> Reminder: <%= r.reminder_name %> </h1>
@@ -18,7 +22,7 @@
         <% reminders.each do |r| %>
           <% if date == r.date %>
             <div>
-             <p class="title"> <%= r.start_time.strftime("%H:%M") %> -<%= r.reminder_name %></p>
+             <p class="title"> <%= r.start_time.strftime("%H:%M") %> - <%= r.reminder_name %></p>
             </div>
           <% end %>
         <% end %>

@@ -1,24 +1,33 @@
 <h1>Hi Betty, today is <%="#{Date.today.strftime("%A, %b %d")}" %></h1>
-<% @reminders.each do |r| %>
-  <% if r.date == Date.today %>
-    <div id="today_event">
-      <h1><%= r.reminder_name %></h1>
-      <h2>Date: <%= r.date.strftime("%m/%d/%Y") %>,</h2>
-      <h2>Start Time: <%= r.start_time.strftime("%H:%M")%>,</h2>
-      <h2>Duration: <%= r.duration %>min,</h2>
-      <h2>Repetition: <%= r.repetition %></h2>
-      <h2>Notification: <%= r.notification %></h2>
-      <h2>Completed: <%= r.completion %>  </h2>
-      <div>
-        <button class="submit-notification" id="submit-form"> Notify Me </button>
-    </div>
-    </div>
-  <% end %>
-<% end %>
-
-
-<h3>Create A New Reminder</h3>
-<%= render 'form' %>
+<div class="eventcontainer">
+  <div class="today_event">
+    <% @reminders.each do |r| %>
+      <% if r.date == Date.today %>
+        <div id="todays">
+          <h1><%= r.reminder_name %></h1>
+          <h2><strong>Date:</strong> <%= r.date.strftime("%m/%d/%Y") %></h2>
+          <h2><strong>Start Time:</strong> <%= r.start_time.strftime("%H:%M")%></h2>
+          <h2><strong>Duration:</strong> <%= r.duration %>min</h2>
+          <h2><strong>Repetition:</strong> <%= r.repetition %></h2>
+          <h2><strong>Notification:</strong> <%= r.notification %></h2>
+          <h2><strong>Completed: </strong><%= r.completion %>  </h2>
+          <div>
+            <button class="submit-notification" id="submit-form"> Notify Me </button>
+        </div>
+        </div>
+      <% end %>
+    <% end %>
+   </div>
+   <aside id="icon"><%= image_tag("washer_360.png", alt: "washer")%></aside>
+   <aside id="icon"><%= image_tag("pills_360.png", alt: "washer")%></aside>
+   <aside id="icon"><%= image_tag("bday_360.png", alt: "washer")%></aside>
+</div>
+<!-- footer>
+  <div class="newreminder">
+  <h3>Create A New Reminder</h3>
+  <%= render 'form' %>
+  </div>
+</footer> -->
 
 <script>
 

@@ -1,39 +1,57 @@
 
-// h1#welcome {
-//   text-align: center;
-//   font-family: AvenirNext-Regular;
-//   font-size: 144px;
-//   color: #FFFFFF;
-//   line-height: 197px;
-// }
-#moneta {
+#title-wrap {
+  padding: 5% 15%;
+  margin-left: auto;
+  margin-right: auto;
 
-}
+  #moneta {
+    display: inline-block;
+    padding: 10px;
+  }
 
-#moneta-goddess {
-
-}
-
-#caretaker_welcome {
-  display: inline;
-  margin: 0 auto;
-  text-align: center;
-  padding-left: 81px;
-
-  button {
-   box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 2px 0px rgba(0,0,0,0.24);
-   border-radius: 2px
+  #moneta-goddess {
+    display: inline-block;
+    padding: 10px;
   }
 }
 
-#user_welcome {
-  display: inline;
-  margin: 0 auto;
-  text-align: center;
-  padding-left: 108px;
-  
-  button {
-   box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 2px 0px rgba(0,0,0,0.24);
-   border-radius: 2px;
+.welcome_container {
+
+  #caretaker_welcome {
+    display: inline;
+    margin: 0 auto;
+    text-align: center;
+    padding-left: 130px;
+    
+    a {
+      text-decoration: none;
+      font-family: AvenirNext-Regular;
+      color: white;
+      border-style: solid;
+      padding: 5px 15px;
+    }
+
+    a:hover {
+      background-color: black;
+    }
+  }
+
+  #user_welcome {
+    display: inline;
+    margin: 0 auto;
+    text-align: center;
+    padding-left: 130px; 
+    
+    a {
+      text-decoration: none;
+      font-family: AvenirNext-Regular;
+      color: white;
+      border-style: solid;
+      padding: 5px 15px;
+    }
+
+    a:hover {
+      background-color: black;
+    }
   }
 }

@@ -8,17 +8,17 @@ u1 = User.create!(
   )
 
 c1 = Caregiver.create!(
-  first_name: 'Sam',
-  last_name: 'Smith',
-  email: 'sam.smith@moneta.com',
+  first_name: 'Bob',
+  last_name: 'Maker',
+  email: 'bob@maker.com',
   password: 'password',
   password_confirmation: 'password'
   )
 
 r1 = Reminder.create!(
   reminder_name: 'Laundry',
-  # date: DateTime.strptime("11/7/2015 22:00", "%m/%d/%Y %H:%M"),
-  # start_time: DateTime.strptime("11/7/2015 22:00", "%m/%d/%Y %H:%M"),
+  date: DateTime.strptime("11/08/2015", "%m/%d/%Y"),
+  start_time: DateTime.strptime("22:00", "%H:%M"),
   duration: 108,
   repetition: 'weekly',
   notification: true,
@@ -28,8 +28,8 @@ r1 = Reminder.create!(
 
 r2 = Reminder.create!(
   reminder_name: 'Algonquin Trip',
-  # date: DateTime.strptime("11/20/2015 12:00", "%m/%d/%Y %H:%M"),
-  # start_time: DateTime.strptime("11/20/2015 12:00", "%m/%d/%Y %H:%M"),
+  date: DateTime.strptime("11/20/2015", "%m/%d/%Y"),
+  start_time: DateTime.strptime("12:00", "%H:%M"),
   duration: 86400,
   repetition: 'none',
   notification: false,

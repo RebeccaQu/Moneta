@@ -1,11 +1,12 @@
  Rails.application.routes.draw do
 
-
-  root 'welcome#index'
+  root :to => 'welcome#index'
 
   resources :users
 
   resources :reminders
+
+  resources :today, only: [:index]
 
   resources :caregivers, only: [:new, :create, :edit, :update]
 
@@ -14,7 +15,5 @@
   resources :medications
 
   resources :families
-  get "/reminders/today" =>"reminders#today"
-  post "/reminders/today" =>"reminders#today"
 
 end

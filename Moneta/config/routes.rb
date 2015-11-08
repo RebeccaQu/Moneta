@@ -13,4 +13,6 @@
 
   resources :medications
 
+  resources :families
+
 end

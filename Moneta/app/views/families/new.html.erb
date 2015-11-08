@@ -1,0 +1,30 @@
+<%= form_for @family do |f| %>
+
+  <div class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dob %>
+    <%= f.text_field :dob %>
+  </div>
+
+  <div class="field">
+    <%= f.label :relationship %>
+    <%= f.text_field :relationship %>
+  </div>
+
+
+
+  <div class="field">
+    <%= f.button "Add a Family Member" %>
+  </div>
+
+<% end %>
+

@@ -6,7 +6,8 @@
 
   resources :reminders
 
-  resources :today, only: [:index]
+  resources :today
+
 
   resources :caregivers, only: [:new, :create, :edit, :update]
 

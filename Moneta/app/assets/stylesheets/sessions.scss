@@ -1,3 +1,37 @@
-// Place all the styles related to the sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#email, #password {
+    border: 1px solid #CCCCCC;
+    box-shadow: inset 0px 1px 0px 0px #ECECEC;
+    border-radius: 5px;
+    height: 100px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.field {
+  margin: 0 auto;
+}
+
+input#reminder_reminder_name {
+    width: 80%;
+    height: 50px;
+    font-size: 30px;
+}
+
+input#reminder_start_time {
+    height: 40px;
+    font-size: 30px;
+}
+
+input#reminder_duration {
+    height: 40px;
+    font-size: 30px;
+}
+
+select#reminder_date_2i {
+    height: 30px;
+}

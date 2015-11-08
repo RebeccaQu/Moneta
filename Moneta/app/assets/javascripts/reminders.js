@@ -1,4 +1,5 @@
-$(document).on('ready page:load', function(){
+$(document).on('ready', function() {
+
     var notice = new PNotify({
       title: 'Notice- Groceries',
       text: 'Reminder - Go to Loblaws for apples.'
@@ -24,7 +25,23 @@ $(document).on('ready page:load', function(){
     })
   });
 
+  $(function(){
+  $("form").submit(function(event){
+    event.preventDefault();
 
+    var action = $(this).attr('action');
+    var method = $(this).attr('method');
+
+    var name = $(this).find('#reminder_name').val();
+    });
+
+    $.ajax({
+        method: method,
+        url: action,
+        data: { name:name }
+        dataType: 'script'
+      });
+  });
 
   // $(function(){
   //   new PNotify({

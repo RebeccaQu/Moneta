@@ -1,6 +1,8 @@
 class RemindersController < ApplicationController
   def index
     @reminders = Reminder.all
+    # binding.pry
+    @reminder = Reminder.new
   end
 
   def show

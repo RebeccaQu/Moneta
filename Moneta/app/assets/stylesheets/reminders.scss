@@ -1,3 +1,75 @@
 // Place all the styles related to the reminders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+table {
+  text-align: center;
+  margin: auto;
+  border-collapse: collapse;
+  width: 85%;
+}
+
+td,th {
+  font-family: proxima-nova,sans-serif;
+  font-size: 18px;
+  padding: 6px;
+  border: 1px solid #999;
+}
+
+th {
+  text-align: left;
+  font-weight: normal;
+  background: #f8f8f8;
+  color: #1A1A1A;
+  text-align: center;
+  width: 14.2857142857143%;
+}
+
+td {
+  background: #FFF;
+  color: #777;
+  height: 130px;
+  vertical-align: top;
+  font-size: 16px;
+  padding: 0px;
+}
+
+p {
+  margin-top: 6px;
+  margin-bottom: 2px;
+  margin-left: 6px;
+  text-align: left;
+  font-size: 18px;
+  padding-bottom: 2px;
+  font-weight: bold;
+}
+
+header.calendar-header {
+  text-align: center;
+  padding-bottom: 12px;
+  padding-top: 40px;
+}
+
+header.calendar-header a {
+  color: #444;
+  font-size: 30px;
+  padding-bottom: 3px;
+  text-decoration: none;
+}
+
+header.calendar-header span {
+  font-family: proxima-nova,sans-serif;
+  font-size: 30px;
+  font-weight: normal;
+  color: #444;
+  padding: 10px;
+}
+
+div {
+  padding: 2px;
+  color: #22474F
+}
+
+.today {
+  background-color: #f0f0f0;
+}

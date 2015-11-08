@@ -6,3 +6,25 @@ byebug
  <h3> <%= r.start_time %> </h3>
  <h3> <%= r.date  %></h3>
 <% end %>
+
+<table>
+  <tbody>
+    <tr>
+      <%= month_calendar events: @reminders do |date, reminders| %>
+
+        <p> <%= date.day %> </p>
+
+        <% reminders.each do |r| %>
+          <% if date == r.date %>
+            <div>
+              <%= r.reminder_name %>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Create new reminder</h3>
+<%= render 'form' %>

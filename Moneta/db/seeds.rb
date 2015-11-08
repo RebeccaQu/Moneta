@@ -17,8 +17,8 @@ c1 = Caregiver.create!(
 
 r1 = Reminder.create!(
   reminder_name: 'Laundry',
-  date: DateTime.strptime("11/7/2015 22:00", "%m/%d/%Y %H:%M"),
-  start_time: DateTime.strptime("11/7/2015 22:00", "%m/%d/%Y %H:%M"),
+  # date: DateTime.strptime("11/7/2015 22:00", "%m/%d/%Y %H:%M"),
+  # start_time: DateTime.strptime("11/7/2015 22:00", "%m/%d/%Y %H:%M"),
   duration: 108,
   repetition: 'weekly',
   notification: true,
@@ -28,8 +28,8 @@ r1 = Reminder.create!(
 
 r2 = Reminder.create!(
   reminder_name: 'Algonquin Trip',
-  date: DateTime.strptime("11/20/2015 12:00", "%m/%d/%Y %H:%M"),
-  start_time: DateTime.strptime("11/20/2015 12:00", "%m/%d/%Y %H:%M"),
+  # date: DateTime.strptime("11/20/2015 12:00", "%m/%d/%Y %H:%M"),
+  # start_time: DateTime.strptime("11/20/2015 12:00", "%m/%d/%Y %H:%M"),
   duration: 86400,
   repetition: 'none',
   notification: false,

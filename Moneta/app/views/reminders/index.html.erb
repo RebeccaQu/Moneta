@@ -2,6 +2,28 @@
 
 <% @reminders.each do |r| %>
  <h1> <%= r.reminder_name %> </h1>
- <h3> <%= r.start_time.strftime("%l:%M %p") %> </h3>
- <h3> <%= r.date.strftime("%b %d, %Y")  %></h3>
+ <h3> <%= r.start_time %> </h3>
+ <h3> <%= r.date  %></h3>
 <% end %>
+
+<table>
+  <tbody>
+    <tr>
+      <%= month_calendar events: @reminders do |date, reminders| %>
+        <p> <%= date.day %> </p>
+        
+        <%= reminders.each do |r| %>
+
+            <div>
+              <%= r.reminder_name %>
+            </div>
+
+        <% end %>
+
+      <% end %>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Create new reminder</h3>
+<%= render 'form' %>

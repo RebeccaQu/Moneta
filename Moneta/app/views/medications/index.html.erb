@@ -1,6 +1,15 @@
 <h1>My Medications</h1>
 
 <% @medications.each do |m| %>
- <h1> <%= m.medication_name %> </h1>
- <h3> <%= m.refill_date  %></h3>
+ <h2>  Name: <%= m.medication_name %> </h2>
+ <h3> Brand: <%= m.brand %></h3>
+ <h3>Refill Date: <%= m.refill_date  %></h3>
+ <h3>Refill By:  <%=m.refill_date - m.refill_days.to_i  %></h3>
+ <h3> Refill Route: <%= m.route %></h3>
+ <h3> Prescriber: <%= m.prescriber  %></h3>
+ <h3> Dispenser: <%= m.dispenser  %></h3>
+ <h3> Diagnosis: <%= m.diagnosis  %></h3>
+
 <% end %>
+
+<%= render 'form' %>

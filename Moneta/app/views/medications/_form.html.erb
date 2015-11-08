@@ -1,0 +1,50 @@
+<%= form_for @medication do |f| %>
+
+  <div class="field">
+    <%= f.label :medication_name %>
+    <%= f.text_field :medication_name %>
+  </div>
+  <div class="field">
+    <%= f.label :brand %>
+    <%= f.text_field :brand %>
+  </div>
+  <div class="field">
+    <%= f.label :dose %>
+    <%= f.text_field :dose %>
+  </div>
+  <div class="field">
+    <%= f.label :route %>
+    <%= f.text_field :route %>
+  </div>
+
+  <div class="field">
+    <%= f.label :refill_date %>
+    <%= f.date_field :refill_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :refill_days %>
+    <%= f.number_field :refill_days %>
+  </div>
+
+  <div class="field">
+    <%= f.label :prescriber %>
+    <%= f.text_field :prescriber %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dispenser %>
+    <%= f.text_field :dispenser %>
+  </div>
+
+
+
+
+
+
+  <div class="field">
+    <%= f.button "Add a medication" %>
+  </div>
+
+<% end %>
+

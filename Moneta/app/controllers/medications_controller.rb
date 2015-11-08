@@ -1,6 +1,7 @@
 class MedicationsController < ApplicationController
   def index
     @medications = Medication.all
+    @medication = Medication.new
   end
 
   def update

@@ -1,16 +1,15 @@
-<h1>Reminders</h1>
+<h1>Monthly View</h1>
 
 <% @reminders.each do |r| %>
- <h1> <%= r.reminder_name %> </h1>
- <h3> <%= r.start_time %> </h3>
- <h3> <%= r.date  %></h3>
+ <h1> Reminder: <%= r.reminder_name %> </h1>
+ <h3> Date: <%= r.date.strftime("%m/%d/%Y") %> </h3>
+ <h3> Start Time: <%= r.start_time.strftime("%H:%M") %> </h3>
 <% end %>
 
 <table>
   <tbody>
     <tr>
       <%= month_calendar events: @reminders do |date, reminders| %>
-
         <p> <%= date.day %> </p>
 
         <% reminders.each do |r| %>
@@ -26,7 +25,8 @@
 </table>
 
 
-<h3>Create new reminder</h3>
+<h3>Create A New Reminder</h3>
+
 <%= render 'form' %>
 
 <button id="submit-notification">Create a Notification</button>

@@ -1,5 +1,6 @@
-  <h1>  <%= @reminder.reminder_name %></h1>
-   <h2>Start Time: <%= @reminder.start_date%></dd></h2>
-   <h2> Duration: <%= @reminder.duration %> </h2>
 
+<h1><%= @reminder.reminder_name %></h1>
+<h2>Date: <%= @reminder.date.strftime("%m/%d/%Y") %></h2>
+<h2>Start Time: <%= @reminder.start_time.strftime("%H:%M")%></h2>
+<h2>Duration: <%= @reminder.duration %>min</h2>
 

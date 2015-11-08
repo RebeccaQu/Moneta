@@ -1,0 +1,6 @@
+<h1>My Medications</h1>
+
+<% @medications.each do |m| %>
+ <h1> <%= m.medication_name %> </h1>
+ <h3> <%= m.refill_date  %></h3>
+<% end %>

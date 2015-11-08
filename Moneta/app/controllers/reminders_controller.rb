@@ -7,7 +7,7 @@ class RemindersController < ApplicationController
 
   def show
     @reminder = Reminder.find(params[:id])
-    # @reminder = Reminder.where(start_time: (Date.today))
+    @reminder = Reminder.where(start_time: (Date.today))
     # @reminder = Reminder.new
     # @reminder.start_time = Date.today
     # @reminder.date = Date.today

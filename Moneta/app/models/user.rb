@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   has_secure_password
 
   has_many :reminders
+  has_many :medications
 
   validates :password, length: { minimum: 3 }, on: :create
   validates :password, confirmation: true, on: :create

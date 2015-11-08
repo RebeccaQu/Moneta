@@ -2,9 +2,9 @@
 
   root 'welcome#index'
 
-  resources :users do
-    resources :reminders
-  end
+  resources :users
+
+  resources :reminders
 
   resources :caregivers, only: [:new, :create, :edit, :update]
 

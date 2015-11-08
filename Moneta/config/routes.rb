@@ -5,6 +5,7 @@
   resources :users
 
   resources :reminders
+  get '/reminders/today'
 
   resources :caregivers, only: [:new, :create, :edit, :update]
 

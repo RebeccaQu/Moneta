@@ -11,6 +11,14 @@ class RemindersController < ApplicationController
     # @reminder.date = Date.today
   end
 
+  def today
+    if current_user
+      @reminders = Reminder.where(start_time: (Date.today))
+    else
+      render new_session_path
+    end
+  end
+
   def new
     @reminder = Reminder.new
     @reminder.start_time

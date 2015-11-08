@@ -1,33 +1,9 @@
 <h1>Hi Betty, today is <%="#{Date.today.strftime("%A, %b %d")}" %></h1>
-<<<<<<< HEAD
+
 
 <%= link_to "Monthly View", reminders_path %> |
 <%= link_to "My Family", families_path %> |
 <%= link_to "My Medication", medications_path %>
-
-<% @reminders.each do |r| %>
-  <% if r.date == Date.today %>
-    <div id="today_event">
-      <h1><%= r.reminder_name %></h1>
-      <h2>Date: <%= r.date.strftime("%m/%d/%Y") %>,</h2>
-      <h2>Start Time: <%= r.start_time.strftime("%H:%M")%>,</h2>
-      <h2>Duration: <%= r.duration %>min,</h2>
-      <h2>Repetition: <%= r.repetition %></h2>
-      <h2>Notification: <%= r.notification %></h2>
-      <h2>Completed: <%= r.completion %>  </h2>
-      <div>
-        <button class="submit-notification" id="submit-form"> Notify Me </button>
-    </div>
-    </div>
-  <% end %>
-<% end %>
-
-
-<h3>Create A New Reminder</h3>
-
-<div class="new-reminder">
-    <%= render 'form' %>
-</div>
 
 <div class="eventcontainer">
   <div class="today_event">
@@ -52,20 +28,13 @@
    <aside id="icon"><%= image_tag("pills_360.png", alt: "washer")%></aside>
    <aside id="icon"><%= image_tag("bday_360.png", alt: "washer")%></aside>
 </div>
-<!-- footer>
-  <div class="newreminder">
-  <h3>Create A New Reminder</h3>
-  <%= render 'form' %>
-  </div>
-</footer> -->
-
 
 <script>
 
   $(document).on('ready', function() {
   var notice = new PNotify({
-  title: 'Todays Medications',
-  text: 'Take two Vitamin D pills before Breakfast',
+  title: 'Laundry will be ready at 12 PM',
+  text: 'Put Clothes in the dryer at 11:30',
   hide: false,
   buttons: {
       closer: false,
@@ -76,8 +45,8 @@
       notice.remove();
   });
   var notice1 = new PNotify({
-  title: 'Todays is a family Members Birthday',
-  text: 'Call Them',
+  title: 'Take Alendronate',
+  text: 'Take pill weekly at 18:00pm',
   hide: false,
   buttons: {
       closer: false,
@@ -88,8 +57,8 @@
       notice1.remove();
   });
   var notice2 = new PNotify({
-    title: 'Laundry will be ready at 6 PM',
-    text: 'Put Clothes in the dryer at 5:30',
+    title: 'Call Michael Smith(son)! Its His Birthday',
+    text: 'Phone Number: (123) 456-7891',
     hide: false,
     buttons: {
       closer_hover: false,

@@ -1,21 +1,21 @@
 <h1>Hi Alice, today is <%="#{Date.today.strftime("%A, %b %d")}" %></h1>
-
 <% @reminders.each do |r| %>
   <% if r.date == Date.today %>
-    <div>
+    <div id="today_event">
       <h1><%= r.reminder_name %></h1>
-      <h2>Date: <%= r.date.strftime("%m/%d/%Y") %></h2>
-      <h2>Start Time: <%= r.start_time.strftime("%H:%M")%></h2>
-      <h2>Duration: <%= r.duration %>min</h2>
+      <h2>Date: <%= r.date.strftime("%m/%d/%Y") %>,</h2>
+      <h2>Start Time: <%= r.start_time.strftime("%H:%M")%>,</h2>
+      <h2>Duration: <%= r.duration %>min,</h2>
       <h2>Repetition: <%= r.repetition %></h2>
       <h2>Notification: <%= r.notification %></h2>
-      <h2>Completed: <%= r.completion %> </h2>
+      <h2>Completed: <%= r.completion %>  </h2>
       <div>
         <button class="submit-notification" id="submit-form"> Notify Me </button>
     </div>
     </div>
   <% end %>
 <% end %>
+
 
 <h3>Create A New Reminder</h3>
 <%= render 'form' %>

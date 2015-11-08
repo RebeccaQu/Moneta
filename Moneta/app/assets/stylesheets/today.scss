@@ -1,3 +1,29 @@
-// Place all the styles related to the today controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#today_event{
+  h2 {
+    display: inline-block;
+    font-size: 21px;
+    font-family: sans-serif;
+    font-weight: 300;
+  }
+}
+
+p.tod{
+  color: black;
+
+}
+
+p.title {
+  font-size: 0.8rem;
+  color: black;
+  font-weight: 300;
+}
+
+
+
+// <!-- <aside id="icon"><%= image_tag(#{}"washer_360.png", alt: "washer")%></aside> -->
+
+.ui-pnotify {
+  opacity: 2;
+  background-color: gray;
+}
+

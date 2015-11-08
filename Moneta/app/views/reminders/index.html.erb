@@ -9,16 +9,16 @@
 <% end %>
 <% end %>
 
-<table>
+<table class="calendar">
   <tbody>
     <tr>
       <%= month_calendar events: @reminders do |date, reminders| %>
-        <p> <%= date.day %> </p>
+        <p class="tod"> <%= date.day %> </p>
 
         <% reminders.each do |r| %>
           <% if date == r.date %>
             <div>
-             <%= r.start_time.strftime("%H:%M") %> <%= r.reminder_name %>
+             <p class="title"> <%= r.start_time.strftime("%H:%M") %> -<%= r.reminder_name %></p>
             </div>
           <% end %>
         <% end %>

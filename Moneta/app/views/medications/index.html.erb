@@ -1,5 +1,5 @@
 <h1>My Medications</h1>
-
+<div id= "meds"
 <% @medications.each do |m| %>
  <h2>  Name: <%= m.medication_name %> </h2>
  <h3> Brand: <%= m.brand %></h3>
@@ -11,5 +11,5 @@
  <h3> Diagnosis: <%= m.diagnosis  %></h3>
 
 <% end %>
-
+</div>
 <%= render 'form' %>

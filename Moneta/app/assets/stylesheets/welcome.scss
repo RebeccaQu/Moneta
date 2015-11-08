@@ -1,3 +1,28 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background: #00ACC1;
+}
+
+h1#welcome {
+  text-align: center;
+  font-family: AvenirNext-Regular;
+  font-size: 144px;
+  color: #FFFFFF;
+  line-height: 197px;
+
+}
+
+#caretaker_welcome {
+
+  button {
+   box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 2px 0px rgba(0,0,0,0.24);
+   border-radius: 2px
+  }
+}
+
+#user_welcome {
+
+  button {
+   box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 2px 0px rgba(0,0,0,0.24);
+   border-radius: 2px
+  }
+}

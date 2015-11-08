@@ -12,17 +12,17 @@
 
   <div class="field">
     <%= f.label :date %>
-    <%= f.datetime_select :date %>
+    <%= f.datetime_select :date, :discard_minute => true,  :discard_hour => true   %>
   </div>
 
   <div class="field">
     <%= f.label :duration %>
-    <%= f.date_field :duration %>
+    <%= f.time_field :duration %>
   </div>
 
 
 
-  <div class="field">
+  <div class="field" id="#laundry-form">
     <%= f.button "Create Reminder" %>
   </div>
 

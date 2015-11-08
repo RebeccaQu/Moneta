@@ -1,0 +1,8 @@
+<% if @reminders.start_date == Date.today %>
+<div>
+<%= render 'reminder' %>
+<% end %>
+
+</div>
+
+<%= render 'form' %>

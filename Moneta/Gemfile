@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+source 'https://rails-assets.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
@@ -34,6 +34,12 @@ gem "figaro"
 gem 'pusher'
 
 gem 'simple_calendar', '~> 1.1.0'
+
+gem 'rails-assets-pnotify'
+gem 'unobtrusive_flash', '>=3'
+
+
+gem 'whenever', :require => false
 
 # Use Unicorn as the app server
 # gem 'unicorn'

@@ -14,5 +14,7 @@
   resources :medications
 
   resources :families
+  get "/reminders/today" =>"reminders#today"
+  post "/reminders/today" =>"reminders#today"
 
 end

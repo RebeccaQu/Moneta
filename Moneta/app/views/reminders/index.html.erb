@@ -10,14 +10,15 @@
   <tbody>
     <tr>
       <%= month_calendar events: @reminders do |date, reminders| %>
-        <p> <%= date.day %> </p>
-        
-        <%= reminders.each do |r| %>
 
+        <p> <%= date.day %> </p>
+
+        <% reminders.each do |r| %>
+          <% if date == r.date %>
             <div>
               <%= r.reminder_name %>
             </div>
-
+          <% end %>
         <% end %>
 
       <% end %>

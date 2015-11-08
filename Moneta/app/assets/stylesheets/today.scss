@@ -1,10 +1,19 @@
-#today_event{
+.eventcontainer{
+  position: fixed;
+}
+
+#todays{
+   width: 75%;
+   padding-bottom: 3%;
+   padding-left: 11%;
+
   h2 {
-    display: inline-block;
+    display: inline;
     font-size: 21px;
     font-family: sans-serif;
     font-weight: 300;
   }
+
 }
 
 p.tod{
@@ -19,11 +28,34 @@ p.title {
 }
 
 
-
-// <!-- <aside id="icon"><%= image_tag(#{}"washer_360.png", alt: "washer")%></aside> -->
-
 .ui-pnotify {
   opacity: 2;
   background-color: gray;
 }
 
+.newreminder {
+  position: fixed;
+}
+
+
+
+.today_event {
+    float: right;
+    position: fixed;
+    padding-left: 22%;
+}
+
+aside#icon {
+    padding-top: 11%;
+    padding-left: 8%;
+    position: relative;
+}
+
+footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+
+}

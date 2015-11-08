@@ -6,21 +6,41 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
-
   <script src="//js.pusher.com/2.2/pusher.min.js"></script>
   <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 </head>
 <body>
+  
+  <% if controller_name == "welcome" && action_name == "index" %>
 
-<%= yield %>
+    <%= yield %>
 
-  <p class="userinfo">
-    <% if current_user %>
-      Signed in as <%= current_user.email %>. <%= link_to "Log out", session_path("current"), :method => :delete %>
-    <% else %>
-      <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
-    <% end %>
-  </p>
+    <div id="user_welcome"> <%= link_to "SIGN UP", new_user_path %></div>
+    <div id="user_welcome"> <%= link_to "LOG IN", new_session_path %></div>
+
+    <div id="caretaker_welcome"> <%= link_to "CAREGIVER SIGN UP", new_user_path %></div>
+    <div id="caretaker_welcome"> <%= link_to "CAREGIVER LOG IN", new_session_path %></div>
+
+      <% if current_user %>
+        Signed in as <%= current_user.email %>. <%= link_to "Log out", session_path("current"), :method => :delete %>
+      <% else %>
+        <%= link_to "LOG IN", new_session_path %> or <%= link_to "SIGN UP", new_user_path %>
+      <% end %>
+
+  <% end %>
+
+  <% unless controller_name == "welcome" && action_name == "index" %>
+
+    <%= yield %>
+
+    <p class="userinfo">
+      <% if current_user %>
+        Signed in as <%= current_user.email %>. <%= link_to "Log out", session_path("current"), :method => :delete %>
+      <% else %>
+        <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
+      <% end %>
+    </p>
+  <% end %>
 
 </body>
 </html>

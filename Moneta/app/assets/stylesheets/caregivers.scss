@@ -1,3 +1,46 @@
-// Place all the styles related to the caregivers controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.sign-up-contained {
+
+  input[type="submit"] {
+      margin: 0 auto;
+      align-self: center;
+      width: 30%;
+      height: 50px;
+      background-color: #00ACC1;
+      border-radius: 5px;
+      font-size: 25px;
+  }
+
+  .caregiver-form {
+    background-color: rgba(255,255,255,0.28);;
+    width: 80%;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 5px;
+    text-align: center;
+}
+
+  }
+
+  form#new_user {
+      text-align: center;
+  }
+
+  input {
+      height: 39px;
+      width: 70%;
+      background: #FFFFFF;
+      border:1px solid #CCCCCC;
+      box-shadow: inset 0px 1px 0px 0px #ECECEC;
+      border-radius: 5px;
+      text-align: center;
+
+  }
+
+  .field {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}

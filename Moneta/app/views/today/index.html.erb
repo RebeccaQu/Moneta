@@ -8,7 +8,9 @@
       <h2>Start Time: <%= r.start_time.strftime("%H:%M")%></h2>
       <h2>Duration: <%= r.duration %>min</h2>
       <h2>Completed: <%= r.completion %> </h2>
-      <button id="submit-notification"> Notify Me </button>
+      <div>
+        <button class="submit-notification" id="submit-form"> Notify Me </button>
+    </div>
     </div>
   <% end %>
 <% end %>

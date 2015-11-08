@@ -1,22 +1,21 @@
 class RemindersController < ApplicationController
   def index
-      @reminders = Reminder.where(start_time: (Date.today))
-      @reminder = Reminder.new
-      @reminder.start_time = Date.today
-      @reminder.date = Date.today
+    @reminders = Reminder.all
   end
 
   def show
     @reminder = Reminder.find(params[:id])
+    @reminder = Reminder.where(start_time: (Date.today))
+    # @reminder = Reminder.new
+    # @reminder.start_time = Date.today
+    # @reminder.date = Date.today
   end
 
   def new
     @reminder = Reminder.new
-    @reminder.start_time = Date.today
+    @reminder.start_time
     @reminder.date = Date.today
-
   end
-
 
   def create
     @reminder = Reminder.new(reminder_params)
@@ -35,9 +34,9 @@ class RemindersController < ApplicationController
   end
 
   private
+
   def reminder_params
     params.require(:reminder).permit(:reminder_name, :date, :start_time, :duration, :repetition, :notification, :completion)
   end
-
 
 end

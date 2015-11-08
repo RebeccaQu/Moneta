@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151107163307) do
+ActiveRecord::Schema.define(version: 20151108000140) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,18 +23,20 @@ ActiveRecord::Schema.define(version: 20151107163307) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "user_id"
   end
 
   create_table "reminders", force: :cascade do |t|
     t.string   "reminder_name"
-    t.datetime "date"
-    t.datetime "start_time"
     t.integer  "duration"
     t.string   "repetition"
     t.boolean  "notification"
     t.boolean  "completion"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "user_id"
+    t.integer  "start_time"
+    t.date     "date"
   end
 
   create_table "users", force: :cascade do |t|

@@ -4,7 +4,7 @@
 
 #todays{
    width: 75%;
-   padding-bottom: 3%;
+   padding-bottom: 0;
    padding-left: 11%;
 
   h2 {
@@ -27,7 +27,6 @@ p.title {
   font-weight: 300;
 }
 
-
 .ui-pnotify {
   opacity: 2;
   background-color: gray;
@@ -37,8 +36,6 @@ p.title {
   position: fixed;
 }
 
-
-
 .today_event {
     float: right;
     position: fixed;
@@ -46,7 +43,7 @@ p.title {
 }
 
 aside#icon {
-    padding-top: 11%;
+    padding-top: 9%;
     padding-left: 8%;
     position: relative;
 }
@@ -58,4 +55,9 @@ footer {
    height:30px;
    width:100%;
 
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }

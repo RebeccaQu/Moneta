@@ -1,10 +1,11 @@
+
+<h1 class="family">My Family</h1>
+
 <%= link_to "Today's View", today_index_path %> |
 <%= link_to "Monthly View", reminders_path %> |
 <%= link_to "My Medication", medications_path %>
 
 <div id= families>
-
-  <h1 class="family">My Family</h1>
   <div class="family_container">
     <% @families.each do |f| %>
      <div id= "fammember"

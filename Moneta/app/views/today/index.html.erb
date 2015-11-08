@@ -1,4 +1,4 @@
-<h1>Today's View</h1>
+<h1>Hi Alice, today is <%="#{Date.today.strftime("%A, %b %d")}" %></h1>
 
 <% @reminders.each do |r| %>
   <% if r.date == Date.today %>
